@@ -1,5 +1,12 @@
 # Field Tables
 Small C library to record, and later print formatted values in a 'table' of 'fields'.
+## Features
+- Each 'field' has its own format specifier. For example, field "time elapsed" could have the format spec "%0.2lf".
+- Fields can have a max/min width, which defaults to the strlen of the title. They can also be left or right justified (right default).
+- If you add an entry (or a title) to a field which is truncated by the `max_print_width`, you will get a warning (which can be suppressed by defining `_SUPPRESS_TRUNCATION_WARNINGS`).
+
+
+## Using the library
 
 ### 0. Creating a field table
 Field Tables are created via:
