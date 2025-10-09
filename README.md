@@ -25,6 +25,19 @@ Field_t *new_Field(const char* field_title,
                    bool left_justify,  
                    ssize_t max_print_width);
 ```
+DATATYPES are just:
+```c
+typedef enum {
+	DT_FLOAT,
+	DT_DOUBLE,
+	DT_INT,
+	DT_LONG,
+	DT_SSIZE_T,
+	DT_CSTRING,
+}DATATYPE;
+```
+They control reading and writing of the values, but do not impact the eventual format string which is used, supplied by the user.
+
 
 ### 2. Adding entries to a table
 Once a field is created, you may add 'entries' (rows) to them, by calling the following:
